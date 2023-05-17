@@ -22,8 +22,6 @@ export function ContactForm({ onSubmit }) {
     setContact({ name: '', number: '' });
   };
 
-  console.log(contact);
-
   const { name, number } = contact;
 
   return (

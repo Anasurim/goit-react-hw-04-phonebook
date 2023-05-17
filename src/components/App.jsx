@@ -20,9 +20,7 @@ export function App() {
     const contacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(contacts);
 
-    if (parsedContacts) {
-      setContacts(parsedContacts);
-    }
+    setContacts(parsedContacts);
   }, []);
 
   useEffect(() => {
@@ -77,7 +75,6 @@ export function App() {
   const filterContacts = contacts.filter(contact => {
     return contact.name.toLowerCase().includes(normalizedFilter);
   });
-  console.log(filterContacts);
 
   return (
     <>
